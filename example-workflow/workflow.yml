@@ -1,0 +1,37 @@
+x-pegasus:
+  apiLang: python
+  createdBy: tranquilo
+  createdOn: 06-24-25T17:59:59Z
+pegasus: 5.2.0
+name: pipeline
+jobs:
+  - type: job
+    name: curl
+    id: ID0000001
+    arguments:
+      - -o
+      - pegasus.html
+      - http://pegasus.isi.edu
+    uses:
+      - lfn: pegasus.html
+        type: output
+        stageOut: false
+        registerReplica: false
+  - type: job
+    name: wc
+    id: ID0000002
+    stdout: count.txt
+    arguments:
+      - -l
+      - pegasus.html
+    uses:
+      - lfn: pegasus.html
+        type: input
+      - lfn: count.txt
+        type: output
+        stageOut: true
+        registerReplica: true
+jobDependencies:
+  - id: ID0000001
+    children:
+      - ID0000002

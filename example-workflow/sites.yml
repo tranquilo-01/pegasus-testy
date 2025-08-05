@@ -1,0 +1,37 @@
+x-pegasus:
+  apiLang: python
+  createdBy: tranquilo
+  createdOn: 06-24-25T17:59:59Z
+pegasus: 5.2.0
+sites:
+  - name: local
+    arch: x86_64
+    os.type: linux
+    directories:
+      - type: sharedScratch
+        path: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/example-workflow/pegasus-files/scratch/
+        sharedFileSystem: false
+        fileServers:
+          - url: file:///home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/example-workflow/pegasus-files/scratch/
+            operation: all
+      - type: localStorage
+        path: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/example-workflow/pegasus-files/output/
+        sharedFileSystem: false
+        fileServers:
+          - url: file:///home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/example-workflow/pegasus-files/output/
+            operation: all
+    # profiles:
+    #   pegasus:
+    #     style: local
+    # data.configuration: nonsharedfs
+    # data.scratch: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/example-workflow/pegasus-files/scratch/
+    # data.output: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/example-workflow/pegasus-files/output/
+
+  # - name: condorpool
+  #   directories: []
+  #   profiles:
+  #     condor:
+  #       universe: vanilla
+  #     pegasus:
+  #       style: condor
+  #       data.configuration: condorio

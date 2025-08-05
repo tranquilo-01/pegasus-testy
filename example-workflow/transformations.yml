@@ -1,0 +1,16 @@
+x-pegasus:
+  apiLang: python
+  createdBy: tranquilo
+  createdOn: 06-24-25T17:59:59Z
+pegasus: 5.2.0
+transformations:
+  - name: curl
+    sites:
+      - name: local
+        pfn: /usr/bin/curl
+        type: installed
+  - name: wc
+    sites:
+      - name: local
+        pfn: /usr/bin/wc
+        type: installed
