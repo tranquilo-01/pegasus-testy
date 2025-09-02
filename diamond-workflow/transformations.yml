@@ -1,0 +1,21 @@
+x-pegasus:
+  apiLang: python
+  createdBy: tranquilo
+  createdOn: 09-02-25T21:32:42Z
+pegasus: 5.0.4
+transformations:
+- name: preprocess
+  sites:
+  - name: condorpool
+    pfn: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/bin/preprocess
+    type: stageable
+- name: findrange
+  sites:
+  - name: condorpool
+    pfn: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/bin/findrange
+    type: stageable
+- name: analyze
+  sites:
+  - name: condorpool
+    pfn: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/bin/analyze
+    type: stageable
