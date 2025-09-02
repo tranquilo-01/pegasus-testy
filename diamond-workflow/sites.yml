@@ -2,24 +2,26 @@ x-pegasus:
   apiLang: python
   createdBy: tranquilo
   createdOn: 09-02-25T21:32:42Z
-pegasus: 5.0.4
+pegasus: 5.2.0
 sites:
-- name: local
-  directories:
-  - type: sharedScratch
-    path: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/scratch
-    sharedFileSystem: false
-    fileServers:
-    - url: file:///home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/scratch
-      operation: all
-  - type: localStorage
-    path: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/output
-    sharedFileSystem: false
-    fileServers:
-    - url: file:///home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/output
-      operation: all
-- name: condorpool
-  directories: []
-  profiles:
-    pegasus:
-      style: local
+  - name: local
+    arch: x86_64
+    os.type: linux
+    directories:
+      - type: sharedScratch
+        path: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/scratch
+        sharedFileSystem: false
+        fileServers:
+          - url: file:///home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/scratch
+            operation: all
+      - type: localStorage
+        path: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/output
+        sharedFileSystem: false
+        fileServers:
+          - url: file:///home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/output
+            operation: all
+  # - name: condorpool
+  #   directories: []
+  #   profiles:
+  #     pegasus:
+  #       style: local
