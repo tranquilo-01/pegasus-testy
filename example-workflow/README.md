@@ -27,4 +27,4 @@ I generuje nam to wszystkie pliki potrzebne żeby workflow zadziałało. W przyp
 
 ## Moje przemyślenia
 
-Zastanawiałem sie jak ten nowy runtime powinien działać. No i jeżeli to byłby osobny, standalone runtime to dużo rzeczy, które robi pegasus się chyba traci. Najlepiej jakby chyba odpalając pegasus-run, on wykrywał że chcemy uruchomić ten nasz runtime i część zarządzania i analizowania pracy runtime dalej możnaby wykonywać pegasusem. Bo w tym naszym podejściu to tak na prawdę na ten moment nawet ten nasz generator nowy nie jest potrzebny, wystarczyłoby żeby runtime rozumiał pliki `.yml` a to się mija z celem projektu.
+Zastanawiałem sie jak ten nowy runtime powinien działać. No i jeżeli to byłby osobny, standalone runtime to dużo rzeczy, które robi pegasus się chyba traci. Najlepiej jakby chyba odpalając pegasus-run, on wykrywał że chcemy uruchomić ten nasz runtime i część zarządzania i analizowania pracy runtime dalej możnaby wykonywać pegasusem.
