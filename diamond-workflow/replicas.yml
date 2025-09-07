@@ -2,9 +2,9 @@ x-pegasus:
   apiLang: python
   createdBy: tranquilo
   createdOn: 09-02-25T21:32:42Z
-pegasus: 5.0.4
+pegasus: 5.2.0
 replicas:
-- lfn: f.a
-  pfns:
-  - site: local
-    pfn: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/input/f.a
+  - lfn: f.a
+    pfns:
+      - site: local
+        pfn: /home/tranquilo/__STUDIA__/__infa__/sem08/pp/pegasus-testy/diamond-workflow/input/f.a
